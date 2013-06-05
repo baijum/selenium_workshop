@@ -6,6 +6,7 @@
 # Packages
 *.egg
 *.egg-info
+ve
 dist
 build
 eggs
@@ -33,3 +34,8 @@ nosetests.xml
 .mr.developer.cfg
 .project
 .pydevproject
+
+# Others
+README.html
+ui
+todo.db
