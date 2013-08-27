@@ -1,2 +1,17 @@
 Notes
 =====
+
+- Show failure scenarios
+
+
+Timing
+------
+
+Total 150 minutes
+
+20 Minutes - Presntation - Prerequisites - About - Outline - Webdriver
+20 Minutes - Setting up environment - with AUT
+10 Minutes - Explanation about AUT
+10 Minutes - py.test
+20 Minutes - Quick walk through of Locating elements
+

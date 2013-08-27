@@ -40,8 +40,22 @@ About me
 - Conducted many Python related talks and workshops in various parts of India including FOSS.IN
 - Contributed to Selenium Python documentation
 
-Introduction
-============
+Introduction to Selenium Webdriver
+==================================
+
+- History
+- Example of where it is used
+- Multiple language
+- Multiple browser (Chrome, Opera, Firefox, IE, Safari)
+
+.. container:: handout
+
+   - The story starts in 2004 at ThoughtWorks in Chicago, with Jason Huggins
+   - Shinya Kasatani started IDE
+   - Simon Stewart started Webdriver
+
+Outline of the Session
+======================
 
 - A sample web application written using bottle web framework will be used as the application under test (AUT)
 - All the code will be available in a git repo: https://github.com/baijum/selenium_workshop
@@ -81,7 +95,7 @@ Prepare for development (This step also install dependencies)::
 
   python setup.py develop
 
-Initial datatabse::
+Initial database::
 
   python create_db.py
 
