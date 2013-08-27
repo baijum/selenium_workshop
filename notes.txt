@@ -14,4 +14,6 @@ Total 150 minutes
 10 Minutes - Explanation about AUT
 10 Minutes - py.test
 20 Minutes - Quick walk through of Locating elements
-
+10 Minutes - XPATH
+20 Minutes - Write test cases against AUT
+20 Minutes - Question & Answers
