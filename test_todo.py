@@ -1,29 +1,39 @@
 import time
 from selenium import webdriver
+import pytest
 
-def test_simple():
-    driver = webdriver.Firefox()
-    driver.get('http://localhost:8080/')
-    time.sleep(5)
-    assert driver.title == 'TODO List'
-    driver.close()
-    driver.quit()
 
-def test_add_new_item():
-    driver = webdriver.Firefox()
-    driver.get('http://localhost:8080/')
-    time.sleep(2)
-    element = driver.find_element_by_link_text('New')
-    element.click()
-    element = driver.find_element_by_name("task")
-    element.send_keys("Learn Webdriver")
-    element = driver.find_element_by_name("save")
-    element.click()
-    time.sleep(2)
-    driver.close()
-    driver.quit()
+class TestTODO(object):
 
-def test_edit_item():
+    def no_test_simple(self, resource_handler):
+        driver = resource_handler.driver
+        time.sleep(2)
+        assert driver.title == 'TODO List'
+        driver.close()
+        driver.quit()
+
+    def test_add_new_item(self, resource_handler):
+        driver = resource_handler.driver
+        time.sleep(2)
+        from page import MainPage
+        main_page = MainPage(resource_handler)
+        main_page.click_new_task_link()
+
+        #element = driver.find_element_by_name("task")
+        #element.send_keys("Learn Webdriver")
+
+        main_page.task_element = "Learn Webdriver 2"
+
+        element = driver.find_element_by_name("save")
+        element.click()
+        time.sleep(2)
+        driver.close()
+        driver.quit()
+
+
+
+
+def no_test_edit_item():
     driver = webdriver.Firefox()
     driver.get('http://localhost:8080/')
     time.sleep(2)
